@@ -1,0 +1,4 @@
+[submodule "FlaskAPI-Bootstrap-Python-Blogging"]
+	path = FlaskAPI-Bootstrap-Python-Blogging
+	url = https://github.com/zaimusho/FlaskAPI-Bootstrap-Python-Blogging.git
+	branch = master
