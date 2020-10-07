@@ -1,4 +1,5 @@
-
+import unittest
+from unittest.mock import patch
 from django.contrib.auth.models import User
 from django.test import TestCase, RequestFactory, Client 
 from django.urls import reverse
@@ -61,7 +62,9 @@ class TestViews(TestCase):
                
         
     def test_service_details_method_get_action(self):
-        request = RequestFactory().get(self.detail_url)
+        with patch('sys.exit') as cm:
+            request = RequestFactory().get(self.detail_url)
+        
         print(request)
     
     # need to mock the respective working func 
@@ -84,6 +87,4 @@ class TestViews(TestCase):
     #     response = instanceStatus(request)
     #     print(response)
         
-        # need to write the assume role code platform
-        
-    
+    # need to write the assume role code platform
