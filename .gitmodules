@@ -2,3 +2,7 @@
 	path = FlaskAPI-Bootstrap-Python-Blogging
 	url = https://github.com/zaimusho/FlaskAPI-Bootstrap-Python-Blogging.git
 	branch = master
+[submodule "Django-Framework-Timeline-For-AWS-Services"]
+	path = Django-Framework-Timeline-For-AWS-Services
+	url = https://github.com/zaimusho/Django-Framework-Timeline-For-AWS-Services.git
+	branch = master
