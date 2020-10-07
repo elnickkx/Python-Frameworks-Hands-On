@@ -6,3 +6,7 @@
 	path = Django-Framework-Timeline-For-AWS-Services
 	url = https://github.com/zaimusho/Django-Framework-Timeline-For-AWS-Services.git
 	branch = master
+[submodule "AWS-Polling-Assignment"]
+	path = AWS-Polling-Assignment
+	url = https://github.com/zaimusho/AWS-Polling-Assignment.git
+	branch = master
