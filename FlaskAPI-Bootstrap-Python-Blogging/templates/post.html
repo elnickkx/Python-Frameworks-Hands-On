@@ -1,0 +1,39 @@
+<!-- import base loader modules from baseDesign.html -->
+
+{% extends 'baseDesign.html' %}
+
+<!-- using bootstrap libs for easy layouting the blogging pages -->
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-4">
+        <div class="card-body" style="margin: 8px; font-size: 20px;">
+          <a class="btn btn-info" onclick={history.back()} style="margin: 8px 0px;">Navigate Home</a>
+          <div class="card mt-3">
+            <div class="card-header">
+              <div class="row">
+                <div class="col"><strong>{{post[1]}}</strong></div>
+                <div class="col text-right">
+                  <a class="btn btn-primary" href="/edit?title={{post[1]}}&subtitle={{post[2]}}&post={{post[3]}}&_id={{post[0]}}">Update</a>
+                  <!-- looking for auto generated post id -->
+                  <a class="btn btn-danger" href="/delete/{{post[0]}}">Trash</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card-title" style="padding: 0px 15px; font-size: 14px;">
+                  {{post[2]}}
+                </div>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0px 15px; font-size: 16px;">
+              {{post[3]}} 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}

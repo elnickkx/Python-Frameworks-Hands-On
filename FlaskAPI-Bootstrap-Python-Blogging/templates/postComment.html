@@ -1,0 +1,32 @@
+{% extends 'baseDesign.html' %}
+
+<!-- using bootstrap libs for easy layouting the blogging pages -->
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-4">
+        <div class="card-body ">
+          <a class="btn btn-outline-info" onclick={history.back()} style="margin: 8px 10px;">Navigate Home</a>
+          <form id="post" method="POST" action='/postComment?title={{title}} ' class="form-group">
+            <div class="row" style="margin: 7px;">
+              <div class="card-title" style="padding: 0px 15px; font-size: 16px;">
+                <h3 name="title"> {{title}}</h3>
+              </div>
+            </div>
+            <div class="row" style="margin: 5px 10px;">
+              <input type="text" name="comment" placeholder="Post the comment..." class="form-control">
+            </div>
+              <div class="row">
+                <div class="col-md-4 ml-auto text-right" style="margin: 10px;">
+                  <button type="submit" class="btn btn-success col-md-6 mt-2">Comment</button> 
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}

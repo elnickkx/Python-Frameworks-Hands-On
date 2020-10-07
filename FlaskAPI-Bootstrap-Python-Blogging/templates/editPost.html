@@ -1,0 +1,31 @@
+{% extends 'baseDesign.html' %}
+
+<!-- using bootstrap libs for easy layouting the blogging pages -->
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-4">
+        <div class="card-body ">
+          <a class="btn btn-outline-info" onclick={history.back()} style="margin: 8px 0px;">Navigate Home</a>
+          <form id="post" method="GET" action='/updatePost/{{_id}}?title={{title}}&subtitle={{subtitle}}&post={{post}} ' class="form-group">
+            <div class="row" style="margin: 7px;">
+              <input type="text" name="title" placeholder="Enter post title..." class="form-control">
+            </div>
+            <div class="row" style="margin: 7px;">
+            <input type="text" name="subtitle" placeholder="Enter post sub-title..." class="form-control">
+            </div>
+              <textarea name="post" class="form-control noresize mt-3" placeholder="Start typing your post here ..." rows="15"></textarea>
+              <div class="row">
+                <div class="col-md-3 ml-auto">
+                  <button type="submit" class="btn btn-success col-md-10 mt-2">Update Post</button> 
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}
